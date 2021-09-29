@@ -2,12 +2,7 @@ import { React, useState } from "react";
 import styled from "styled-components";
 import { SearchResults } from "../SearchResults/SearchResults";
 
-export const GameDate = ({
-  setDate,
-  setSearchResults,
-  searchResults,
-  getGameData,
-}) => {
+export const GameDate = ({ setDate, searchResults, getGameData }) => {
   return (
     <Container>
       <Form>
@@ -41,9 +36,9 @@ const Container = styled.div`
   }
 
   input::-webkit-calendar-picker-indicator {
-      background: none;
-      padding: 2px 20px;
-    }
+    background: none;
+    padding: 2px 20px;
+  }
 `;
 
 const Label = styled.label`

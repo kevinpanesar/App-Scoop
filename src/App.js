@@ -13,6 +13,7 @@ function App() {
   const [date, setDate] = useState("");
   const [gameid, setGameID] = useState("");
 
+  //first API call to get the ID of the game
   const getGameId = async () => {
     if (date !== "") {
       let response = await fetch(
@@ -31,6 +32,7 @@ function App() {
     }
   };
 
+  //Second API call to get full game details
   const getGameData = async (gameId) => {
     let response = await fetch(
       `https://api-nba-v1.p.rapidapi.com/gameDetails/${gameId}`,
@@ -79,8 +81,8 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
   @media only screen and (min-width: 768px) {
-    /* For everything bigger than 768px */
     width: 80%;
     margin: 0 auto;
   }
@@ -98,6 +100,7 @@ const Header = styled.div`
   justify-content: center;
   align-items: center;
   background-color: black;
+
   @media only screen and (min-width: 768px) {
     /* For everything bigger than 768px */
     width: 80%;

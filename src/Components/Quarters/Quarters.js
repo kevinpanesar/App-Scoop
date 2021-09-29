@@ -63,8 +63,8 @@ const Container = styled.div`
   color: black;
   padding-bottom: 40px;
   font-size: 20px;
+  
   @media only screen and (min-width: 768px) {
-    /* For everything bigger than 768px */
     width: 80%;
     margin: 0 auto;
   }
