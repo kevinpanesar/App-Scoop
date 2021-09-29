@@ -29,12 +29,11 @@ const Container = styled.div`
   font-family: "Oswald", sans-serif;
   margin: 0 auto;
   height: 200px;
-  overflow: scroll;
+  overflow: auto;
   padding-bottom: 15px;
 `;
 
 const SearchResult = styled.div`
-  width: 90%;
   margin: 0 auto;
   padding: 0 15px;
   height: 60px;
@@ -47,9 +46,11 @@ const SearchResult = styled.div`
   :first-child {
     border-top: 2px solid black;
   }
+  //mobile
   @media only screen and (max-width: 367px) {
-      padding: 0 5px;
-    }
+    padding: 0 5px;
+  }
+
 `;
 
 const SelectGameButton = styled.button`
@@ -61,6 +62,11 @@ const SelectGameButton = styled.button`
   @media only screen and (max-width: 367px) {
     padding: 7px 10px;
   }
+
+  @media only screen and (min-width: 768px) {
+    /* For everything bigger than 768px */
+    margin-right: 70px;
+  }
 `;
 
 const Teams = styled.p`
@@ -69,5 +75,10 @@ const Teams = styled.p`
   @media only screen and (max-width: 367px) {
     /* For everything bigger than 768px */
     font-size: 18px;
+  }
+
+  @media only screen and (min-width: 768px) {
+    /* For everything bigger than 768px */
+    margin-left: 70px;
   }
 `;

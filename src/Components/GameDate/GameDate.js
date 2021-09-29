@@ -34,7 +34,16 @@ const Container = styled.div`
     /* For everything bigger than 768px */
     width: 80%;
     margin: 0 auto;
+    input::-webkit-calendar-picker-indicator {
+      background: none;
+      padding: 2px 20px;
+    }
   }
+
+  input::-webkit-calendar-picker-indicator {
+      background: none;
+      padding: 2px 20px;
+    }
 `;
 
 const Label = styled.label`
@@ -43,7 +52,7 @@ const Label = styled.label`
 `;
 const Form = styled.form`
   background-color: white;
-  height: 80px;
+  height: 100px;
   width: 100%;
   display: flex;
   flex-direction: column;
