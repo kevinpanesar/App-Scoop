@@ -6,6 +6,7 @@ export const SearchResults = ({ searchResults, getGameData }) => {
 
   return (
     <Container>
+      {searchResults.length == 0 && <h2>No Results</h2>}
       {searchResults.map((element) => {
         return (
           <SearchResult>
@@ -46,6 +47,9 @@ const SearchResult = styled.div`
   :first-child {
     border-top: 2px solid black;
   }
+  @media only screen and (max-width: 367px) {
+      padding: 0 5px;
+    }
 `;
 
 const SelectGameButton = styled.button`
@@ -54,8 +58,16 @@ const SelectGameButton = styled.button`
   color: white;
   padding: 10px 15px;
   border-radius: 10px;
+  @media only screen and (max-width: 367px) {
+    padding: 7px 10px;
+  }
 `;
 
 const Teams = styled.p`
   font-size: 20px;
+
+  @media only screen and (max-width: 367px) {
+    /* For everything bigger than 768px */
+    font-size: 18px;
+  }
 `;

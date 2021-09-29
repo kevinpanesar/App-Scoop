@@ -25,12 +25,17 @@ export const GameDate = ({
 };
 
 const Container = styled.div`
- width: 100%;
- background-color: white;
- color: black;
- padding-bottom: 20px;
-`;
+  width: 100%;
+  background-color: white;
+  color: black;
+  padding-bottom: 20px;
 
+  @media only screen and (min-width: 768px) {
+    /* For everything bigger than 768px */
+    width: 80%;
+    margin: 0 auto;
+  }
+`;
 
 const Label = styled.label`
   font-family: "Oswald", sans-serif;
@@ -48,7 +53,8 @@ const Form = styled.form`
   input {
     ::-webkit-datetime-edit-text {
       color: red;
-      padding: 0 0.3em;
+      font-family: "Oswald", sans-serif;
+      width: 90%;
     }
   }
 `;

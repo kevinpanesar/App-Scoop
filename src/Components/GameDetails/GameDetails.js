@@ -6,7 +6,7 @@ export const GameDetails = ({ gamedetails }) => {
   console.log(gamedetails);
 
   if (gamedetails.length == 0) {
-    components = <div></div>;
+    components = <Container></Container>;
   } else {
     components = (
       <Container>
@@ -35,6 +35,11 @@ const Container = styled.div`
   background-color: white;
   margin: 0 auto;
   padding-top: 20px;
+  @media only screen and (min-width: 768px) {
+    /* For everything bigger than 768px */
+    width: 80%;
+    margin: 0 auto;
+  }
 `;
 
 const FullTeamName = styled.p`

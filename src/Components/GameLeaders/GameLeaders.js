@@ -36,6 +36,12 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+
+  @media only screen and (min-width: 768px) {
+    /* For everything bigger than 768px */
+    width: 80%;
+    margin: 0 auto;
+  }
 `;
 
 const TeamsContainer = styled.div`

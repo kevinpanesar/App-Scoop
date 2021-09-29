@@ -76,10 +76,14 @@ export default App;
 
 const Container = styled.div`
   font-family: "Oswald", sans-serif;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media only screen and (min-width: 768px) {
+    /* For everything bigger than 768px */
+    width: 80%;
+    margin: 0 auto;
+  }
 `;
 
 const Title = styled.h1`
@@ -94,6 +98,11 @@ const Header = styled.div`
   justify-content: center;
   align-items: center;
   background-color: black;
+  @media only screen and (min-width: 768px) {
+    /* For everything bigger than 768px */
+    width: 80%;
+    margin: 0 auto;
+  }
 `;
 
 const NbaImg = styled.img`
